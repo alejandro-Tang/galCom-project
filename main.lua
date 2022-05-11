@@ -10,13 +10,14 @@ function love.load()
     Object = require("libs.classic.classic")
 
     -- load objects
+    require("objects.clickable")
+    require("objects.rectangle")
     require("objects.frame")
     require("objects.button")
 
     -- Set initial Frame
     b1 = Button(200, 150, 30, 30, "button 1", nil)
     b2 = Button(300, 500, 30, 60, "button 2", nil)
-
 
     first_frame = Frame({b1})
     second_frame = Frame({b2})

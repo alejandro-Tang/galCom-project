@@ -1,14 +1,10 @@
-Button = Object.extend(Object);
+Button = Rectangle:extend();
 
 -- TODO: have an attribute that has the button be an 
 -- external image
 function Button:new(x, y, width, height, text, func)
-    self.x = x
-    self.y = y
-    self.width = width
-    self.height = height
+    Button.super.new(self, x, y, width, height, func)
     self.text = text
-    self.func = func
 end
 
 function Button:draw()
@@ -16,8 +12,4 @@ function Button:draw()
     love.graphics.setColor(1, 0, 0)
     love.graphics.print(self.text, self.x, self.y)
     love.graphics.setColor(1, 1, 1)
-end
-
-function Button:press()
-    self.func()
 end
