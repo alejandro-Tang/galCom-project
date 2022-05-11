@@ -3,6 +3,9 @@ function love.load()
     -- Load global variables
     require("global")
 
+    -- Resize window as wanted
+    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT)
+
     -- Load utility functions
     require("utils")
 
@@ -16,11 +19,11 @@ function love.load()
     require("objects.button")
 
     -- Set initial Frame
-    b1 = Button(200, 150, 30, 30, "button 1", nil)
-    b2 = Button(300, 500, 30, 60, "button 2", nil)
+    b1 = Button(200, 150, 200, 100, "button 1", nil, "images/test-button-1.png")
+    b2 = Button(300, 500, 200, 100, "button 2", nil, "images/test-button-1.png")
 
-    first_frame = Frame({b1})
-    second_frame = Frame({b2})
+    first_frame = Frame({b1}, "images/neutral-bg.png")
+    second_frame = Frame({b2}, "images/neutral-bg.png")
 
     b1:linkToFrame(second_frame)
     b2:linkToFrame(first_frame)
