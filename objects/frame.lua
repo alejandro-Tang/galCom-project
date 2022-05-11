@@ -1,4 +1,4 @@
--- Represents a whole set of background + buttons
+-- Represents a whole set of background, together with buttons
 -- to be displayed for the player
 
 Frame = Object:extend()

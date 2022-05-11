@@ -21,9 +21,9 @@ function love.load()
 
     first_frame = Frame({b1})
     second_frame = Frame({b2})
-    
-    b1.func = goToFuncFactory(second_frame)
-    b2.func = goToFuncFactory(first_frame)
+
+    b1:linkToFrame(second_frame)
+    b2:linkToFrame(first_frame)
 
     current_frame = first_frame
 end
